@@ -1,0 +1,17 @@
+User-agent: *
+
+Allow: /
+Allow: /archives
+Allow: /post
+Allow: /page
+Allow: /music/*.html
+
+Disallow: /css
+Disallow: /img
+Disallow: /js
+Disallow: /fonts
+Disallow: /music
+
+Sitemap: https://sanshui.findn.cn/sitemap.xml
+Sitemap: https://sanshui.findn.cn/baidusitemap.xml
+

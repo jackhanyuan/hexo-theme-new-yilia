@@ -1,0 +1,31 @@
+<a href="<%- url_for(post.path) %>" class="<%= class_name %>">
+  	<time datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
+	<!-- <i class="icon-calendar icon"></i> -->
+
+	<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+	&nbsp;
+	<%= date(post.date, date_format) %></time>
+	
+	<!-- busuanzi阅读量统计
+	<% if (theme.footer && theme.footer.show_busuanzi && !index){ %>
+	<span>
+		&nbsp; &nbsp; &nbsp;
+		<span class="post-meta-item-text">阅读量:</span>
+		<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+		<span class="post-meta-item-text">次</span>
+	</span>
+	<% } %>
+	-->
+	
+    <!-- waline阅读量统计 -->
+	<% if (theme.waline.pageview && !index){ %>
+	<span>
+		&nbsp; &nbsp; &nbsp;
+		<i class="fa fa-eye" aria-hidden="true"></i>
+		&nbsp;
+		<span class="waline-pageview-count" data-path="/<%= post.path %>"><i class="fa fa-spinner fa-spin"></i></span>
+	</span>
+	<% } %>
+
+</a>
+

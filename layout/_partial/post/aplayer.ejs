@@ -1,0 +1,31 @@
+<!-- 添加APlayer音乐播放器,详见: https://aplayer.js.org -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+	
+	<!-- 列表左对齐 并显示在最上面一层 -->
+    <div id="aplayer" style="text-align:left;z-index: 9999;">
+	
+	<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+
+    <!-- 为方便修改，添加一个配置文件，修改时直接修改配置文件即可。 -->
+	<script type="text/javascript" src="/music/aplayer_config.js"></script>
+
+    <!-- 根据封面自适应主题色，主要是作用于进度条 -->
+    <script type="text/javascript">
+          const colorThief = new ColorThief();
+          const setTheme = (index) => {
+            if (!ap.list.audios[index].theme) {
+              colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+              });
+            }
+          };
+          setTheme(ap.list.index);
+          ap.on('listswitch', (data) => {
+            setTheme(data.index);
+          });
+    </script>
+
+<!-- APlayer音乐播放器功能结束 -->

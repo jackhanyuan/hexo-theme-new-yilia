@@ -1,0 +1,12 @@
+.left-col #header .profilepic img {
+	/* 控制旋转速度时间*/
+  -webkit-transition: -webkit-transform 1.0s ease-out;
+  -moz-transition: -moz-transform 1.0s ease-out;
+  transition: transform 1.0s ease-out;
+}
+.left-col #header .profilepic img:hover {
+	/* 鼠标经过360% */
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  transform: rotateZ(360deg);
+}

@@ -1,0 +1,222 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %> <%if(index){%> article-index<%}%>" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'article-title_code_ant'}) %>
+        
+		<% if (!post.no_date){ %>
+		  <%- partial('post/date', {class_name: 'archive-article-date', date_format: null}) %>
+        <% } %>
+		
+		<% if(theme.word_count && !post.no_word_count){ %>
+		  <%- partial('post/word_count') %>
+		<% } %>
+      </header>
+    <% } %>
+	
+    <div class="article-entry" itemprop="articleBody">
+	  <!-- 添加分类与标签 -->
+	  <% if (post.type === "categories") { %>
+		<div class="tag-cloud-title">
+		  <h3>共&nbsp;<%= site.tags.length %>&nbsp;个标签</h3>
+		</div>
+		 
+		<div class="tag-cloud">
+		  <div class="tag-cloud-tags">
+			<%- tagcloud({
+			  min_font: 14,
+			  max_font: 34,
+			  amount: 200,
+			  color: true,
+			  start_color: '#88ACDB',
+			  end_color: '#9534f1'
+			  }) %>
+			</div>
+		</div>
+		  
+		<div class="category-all-page">
+		  <div class="category-all-title">
+			<h3>共&nbsp;<%= site.categories.length %>&nbsp;个分类</h3>
+		  </div>
+		  <div class="category-all">
+		    <%- list_categories(site.categories, {
+			  show_count: true,
+			  class: 'category-list-item',
+			  style: 'list',
+			  depth:3,
+		      separator: ''
+			}) %>
+		  </div>
+		</div>
+		<!-- 添加分类与标签结束 -->
+
+		<% } else { %>
+		  <% if (post.excerpt && index){ %>
+			<%- post.excerpt %>
+		  <% if (theme.excerpt_link) { %>
+			<a class="article-more-a" href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %> >></a>
+		<% } %>
+		<% } else { %>
+		  <%- post.content %>
+		<% } %>		  
+	  <% } %>
+      
+	  <!-- 添加打赏 -->
+	  <% if (!index && (theme.reward.enable && !post.no_reward)){ %>
+		<!-- reward type 1 -->
+		<% if (theme.reward.type === 1){ %>
+          <div class="page-reward">
+            <a href="javascript:;" class="page-reward-btn tooltip-top" target="">
+            <div class="tooltip tooltip-east">
+              <span class="tooltip-item">赏</span>
+              <span class="tooltip-content">
+                <span class="tooltip-text">
+                  <span class="tooltip-inner">
+                    <p class="reward-p"><i class="icon icon-quo-left"></i><%= theme.reward.wording%><i class="icon icon-quo-right"></i></p>
+                    <div class="reward-box">
+                      <% if(theme.reward.alipay) {%>
+                        <div class="reward-box-item">
+                          <img class="reward-img" src="<%= theme.reward.alipay%>">
+                          <span class="reward-type">支付宝</span>
+                        </div>
+                      <% } %>
+                      <% if(theme.reward.weixin) {%>
+                        <div class="reward-box-item">
+                          <img class="reward-img" src="<%= theme.reward.weixin%>">
+                          <span class="reward-type">微信</span>
+                        </div>
+                      <% } %>
+                    </div>
+                  </span>
+                </span>
+              </span>
+            </div></a>
+          </div>
+		<% } %>
+		
+		<!-- reward type 2 -->
+		<% if (theme.reward.type === 2){ %>
+		  <div id="reward-container">
+		    <span class="icon-cursor" title="打赏" id="reward-button"
+			  onclick='var qr = document.getElementById("qr"); qr.style.display = (qr.style.display === "none") ? "block" : "none";'
+			  ><a style="color:#fff;">赏</a></span>
+		    <div id="reward-comment"><i class="icon icon-quo-left"></i>&nbsp;<%= theme.reward.wording%>&nbsp;<i class="icon icon-quo-right"></i></div>
+		  
+		    <div id="qr" style="display: none;">
+			  <div style="display:inline-block">
+			    <img loading="lazy" src="<%= theme.reward.alipay%>" alt="支付宝" title="支付宝"/>
+			    <div><span class="reward-type">支付宝</span></div>
+			  </div>
+			
+			  <div style="display:inline-block">
+			    <img loading="lazy" src="<%= theme.reward.weixin%>" alt="微信支付" title="微信支付"/>
+			    <div><span class="reward-type">微信</span></div>
+			  </div>
+		    </div>
+	      </div>
+	    <% } %>
+      <% } %>
+	
+	  <!-- 添加版权声明 -->
+      <% if(theme.declare && theme.declare.enable && !index && !post.no_declare){%>
+        <%- partial('post/declare') %>
+      <% } %>
+	  
+	</div>
+	
+	<!-- 添加置顶 -->
+    <div class="article-info article-info-index">
+      <%if(post.top){%>
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      <% } %>
+	  
+	  <!-- 分类页 -->
+      <%- partial('post/tag') %>
+      <%- partial('post/category') %>
+	  
+	  <!-- 添加展开全文 -->
+      <% if (index && theme.show_all_link){ %>
+        <p class="article-more-link">
+          <a class="article-more-a" href="<%- url_for(post.path) %>"><%= theme.show_all_link %> >></a>
+        </p>
+      <% } %>
+	  
+	  <!-- 添加分享 -->
+      <% if (!index && theme.share_jia && !post.no_share){ %>
+        <%- partial('post/share') %>
+      <% } %>
+	  
+      <div class="clearfix"></div>
+	  
+    </div>
+  </div>
+</article>
+
+<% if (!index){ %>
+  <%- partial('post/nav') %>
+<% } %>
+
+<!-- 添加回到顶部和文章目录 -->
+<%- partial('_partial/aside') %>
+
+<!-- 添加评论 -->
+<% if (!index && !post.no_comments){ %>
+
+  <% if (theme.waline && theme.waline.enable && theme.waline.server_url){ %>
+  <%- partial('post/waline') %>
+  <% } %>
+  
+  <% if (theme.gittalk && theme.gittalk.enable && theme.gittalk.clientID && theme.gittalk.clientSecret && theme.gittalk.repo && theme.gittalk.owner && theme.gittalk.admin){ %>
+  <%- partial('post/gittalk', {
+    key: post.slug,
+    title: post.title,
+    url: config.url+url_for(post.path)
+  }) %>
+  <% } %>
+
+
+  <% if (theme.changyan_appid && theme.changyan_conf){ %>
+  <%- partial('post/changyan', {
+      key: post.slug,
+      title: post.title,
+      url: config.url+url_for(post.path)
+    }) %>
+  <% } %>
+
+  <% if (theme.disqus || config.disqus_shortname){ %>
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = '<%= theme.disqus || config.disqus_shortname %>'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  <% } %>
+
+  <% if (theme.gitment_owner && theme.gitment_repo &&theme.gitment_oauth && theme.gitment_oauth.client_id && theme.gitment_oauth.client_secret){ %>
+  <%- partial('post/gitment', {
+      key: post.slug,
+      title: post.title,
+      url: config.url+url_for(post.path)
+    }) %>
+  <% } %>
+<% } %>
+
+<!-- 文章页添加mathjax公式 -->
+<% if (theme.mathjax){ %>
+  <% if (!index && post.mathjax){ %>
+    <%- partial('mathjax') %>
+  <% } %>
+<% } %>
+<!-- 文章页添加mathjax公式 -->
