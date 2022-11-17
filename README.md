@@ -73,6 +73,16 @@
 
 ### 安装
 
+首先，根据[hexo官网教程](https://hexo.io/zh-cn/docs/)，安装hexo
+
+```sh
+npm install hexo-cli -g
+hexo init blog
+cd blog
+npm install
+hexo server
+```
+
 进入hexo根目录下themes文件夹
 
 ```sh
