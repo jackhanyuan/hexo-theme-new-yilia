@@ -73,7 +73,7 @@
 
 ### 安装
 
-- 安装hexo
+首先，根据[hexo官网教程](https://hexo.io/zh-cn/docs/)，安装hexo
 
 ```sh
 npm install hexo-cli -g  # npm 全局安装hexo-cli
@@ -81,6 +81,14 @@ hexo init blog  # 初始化blog 会自动创建blog文件夹并安装依赖
 hexo -v
 cd blog
 npm install  # 安装依赖
+```
+
+- 删除冲突的文件
+
+```
+rm scaffolds
+rm _config.yml
+rm package.json
 ```
 
 - 克隆repo到hexo根目录
@@ -98,8 +106,6 @@ npm install
 #### 配置
 
 修改hexo根目录下的 `_config.yml` 文件及`themes\new-yilia`目录下的`_config.yml`文件
-
-构建并启动本地博客
 
 ```sh
 hexo clean # 清理
