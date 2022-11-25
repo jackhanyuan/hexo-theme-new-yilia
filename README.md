@@ -87,25 +87,29 @@ npm install  # 安装依赖
 
 ```
 rm scaffolds
+rm source
+rm themes
 rm _config.yml
+rm _config.landscape.yml
 rm package.json
 ```
 
-- 克隆repo到hexo根目录
+- 克隆repo到hexo根目录，并调整目录结构
 
 ```sh
-git clone git@github.com:jackhanyuan/hexo-theme-new-yilia.git .
+git clone git@github.com:jackhanyuan/hexo-theme-new-yilia.git
+mv hexo-theme-new-yilia/* .
 ```
 
 - 安装new-yilia所需依赖
 
 ```sh
-npm install 
+npm install
 ```
 
 ### 配置
 
-修改hexo根目录下的 `_config.yml` 文件及`themes\new-yilia`目录下的`_config.yml`文件
+根据需求，修改hexo根目录下的 `_config.yml` 文件及`themes\new-yilia`目录下的`_config.yml`文件
 
 ```sh
 hexo clean # 清理

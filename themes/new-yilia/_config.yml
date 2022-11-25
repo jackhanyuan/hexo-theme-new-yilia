@@ -1,6 +1,6 @@
 # Header
-author: 'XXX'
-#subtitle: ''
+author: 'new-yilia'
+subtitle: '一个简洁优雅的hexo主题'
 
 
 # 头像url
@@ -29,7 +29,7 @@ subnav:
   github: "#"
   gitee: "#"
   csdn: "#"
-  weibo: "#"
+  # weibo: "#"
   zhihu: "#"
   #qq: "#"
   #weixin: "#"
