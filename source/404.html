@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+  <meta name="viewport" content="width=1080px">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="description" content="404 Not Found：该页无法显示">
+  
+  <title>404 Not Found：该页无法显示 | 三水のBlog</title>
+  <link rel="dns-prefetch" href="https://sanshui.findn.cn">
+  <link rel="alternative" href="/atom.xml" title="三水のBlog" type="application/atom+xml">
+  <link rel="icon" href="/img/favicon.png">
+  <link rel="stylesheet" type="text/css" href="/css/main.0cf68a.css">
+  <style type="text/css">
+    .catch-the-cat canvas{
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    margin: 10px 10px 10px 10px;
+	}
+    .errorpPage-operate .operateBtn {
+		width: 180px;
+		height: 28px;
+		margin-left: 0px;
+		margin-top: 10px;
+		background: #009CFF;
+		border-bottom: 4px solid #0188DE;
+		text-align: center;
+		display: inline-block;
+		font-size: 14px;
+		color: #fff;
+	  }
+
+	.errorpPage-operate .operateBtn:hover {
+		background: #5BBFFF;
+	  }
+	.title {
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: 700;
+    color: rgb(0, 136, 204);
+    display: inline;
+   }	
+  </style>
+    
+
+</head>
+
+<body style="background: #fff;">
+
+
+	<article id="page-404" class="article article-type-page " itemscope itemprop="blogPost">
+		<header class="article-header">
+			<h1 class="article-title_code_ant" itemprop="name"><a href="javascript:window.location.reload()">404 Not Found：该页无法显示 </a></h1>
+		</header>
+		  
+		<div align="center">
+			<div class="title">游戏《圈小猫》</div>
+			<div id="catch-the-cat"  class="catch-the-cat" align="center"></div>	
+			<div class="errorpPage-operate">
+				<a href="javascript:window.location.reload()" class="operateBtn" title="刷新试试">刷新试试</a>
+				<a href="/" class="operateBtn" title="返回首页">返回首页</a>
+			</div>
+		</div>
+    </article>
+
+	<script src="https://qiniu.findn.cn/blog/static/js/phaser.min.js"></script>
+	<script src="https://qiniu.findn.cn/blog/static/js/catch-the-cat.js"></script>
+	<script>
+	  window.game = new CatchTheCatGame({
+		w: 11,
+		h: 11,
+		r: 20,
+		backgroundColor: 0xffffff,
+		parent: 'catch-the-cat',
+		statusBarAlign: 'center',
+		credit: '三水のBlog'
+	  });
+	</script>
+
+	<!--添加爱心鼠标特效-->
+	<script type="text/javascript">
+		! function (e, t, a) {
+		function n() {
+			c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), o(), r()
+		}
+
+		function r() {
+			for (var e = 0; e < d.length; e++) d[e].alpha <= 0 ? (t.body.removeChild(d[e].el), d.splice(e, 1)) : (d[e].y--, d[e].scale += .004, d[e].alpha -= .013, d[e].el.style.cssText = "left:" + d[e].x + "px;top:" + d[e].y + "px;opacity:" + d[e].alpha + ";transform:scale(" + d[e].scale + "," + d[e].scale + ") rotate(45deg);background:" + d[e].color + ";z-index:99999");
+			requestAnimationFrame(r)
+		}
+
+		function o() {
+			var t = "function" == typeof e.onclick && e.onclick;
+			e.onclick = function (e) {
+				t && t(), i(e)
+			}
+		}
+
+		function i(e) {
+			var a = t.createElement("div");
+			a.className = "heart", d.push({
+				el: a,
+				x: e.clientX - 5,
+				y: e.clientY - 5,
+				scale: 1,
+				alpha: 1,
+				color: s()
+			}), t.body.appendChild(a)
+		}
+
+		function c(e) {
+			var a = t.createElement("style");
+			a.type = "text/css";
+			try {
+				a.appendChild(t.createTextNode(e))
+			} catch (t) {
+				a.styleSheet.cssText = e
+			}
+			t.getElementsByTagName("head")[0].appendChild(a)
+		}
+
+		function s() {
+			return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+		}
+		var d = [];
+		e.requestAnimationFrame = function () {
+			return e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+				setTimeout(e, 1e3 / 60)
+			}
+		}(), n()
+	}(window, document);
+	</script>
+
+</body>
+</html>

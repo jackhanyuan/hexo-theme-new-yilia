@@ -1,0 +1,48 @@
+<%- partial('_partial/head') %>
+<body>
+
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      <%- partial('_partial/left-col', null, {cache: !config.relative_link}) %>
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <%- body %>
+          </div>
+        </div>
+      </div>
+	  <% if(theme.footer && theme.footer.enable && !page.no_footer){ %>
+        <%- partial('_partial/footer') %>
+	  <% } %>
+    </div>
+    <%- partial('_partial/after-footer') %>
+    <%- partial('_partial/tools') %>
+    <%- partial('_partial/viewer') %>
+  </div>
+  
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
+  <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/clipboard_use.js"></script>
+  <!-- 代码块复制功能结束 -->
+  
+  <!--全局添加雪花特效 -->
+  <% if (theme.snow && theme.snow.enable){ %>
+    <script type="text/javascript" src="/js/snow.js"></script>
+  <% } %>
+  <!--全局添加雪花特效结束 -->
+
+  <!--全局添加 aplayer播放器 https://aplayer.js.org/#/zh-Hans/ -->
+  <% if (theme.aplayer && theme.aplayer.enable){ %>
+	<%- partial('_partial/post/aplayer.ejs') %>
+  <% } %>
+  <!-- aplayer播放器功能结束 -->
+  
+</body>

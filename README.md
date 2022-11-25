@@ -73,15 +73,37 @@
 
 ### 安装
 
-进入hexo根目录下themes文件夹
+- 安装hexo
 
 ```sh
-cd ./themes/
-git clone git@github.com:jackhanyuan/hexo-theme-new-yilia.git ./new-yilia
+npm install hexo-cli -g  # npm 全局安装hexo-cli
+hexo init blog  # 初始化blog 会自动创建blog文件夹并安装依赖
+hexo -v
+cd blog
+npm install  # 安装依赖
+```
+
+- 克隆repo到hexo根目录
+
+```sh
+git clone git@github.com:jackhanyuan/hexo-theme-new-yilia.git .
+```
+
+- 安装new-yilia所需依赖
+
+```sh
+npm install 
 ```
 
 #### 配置
 
-修改hexo根目录下的 `_config.yml`  ➡️  `theme: new-yilia`
+修改hexo根目录下的 `_config.yml` 文件及`themes\new-yilia`目录下的`_config.yml`文件
 
-主题配置文件在new-yilia目录下的`_config.yml`，请根据自己需要修改使用。
+构建并启动本地博客
+
+```sh
+hexo clean # 清理
+hexo g # 构建
+hexo s # 启动本地sever服务
+hexo d # 部署
+```

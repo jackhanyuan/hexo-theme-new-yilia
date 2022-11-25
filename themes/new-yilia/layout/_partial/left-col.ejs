@@ -1,0 +1,69 @@
+<% var defaultBg = '#4d4d4d'; %>
+<div class="overlay" style="background: <%= theme.style && theme.style.header ? theme.style.header : defaultBg %>"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+	
+		<a href="<%=theme.root%>" class="profilepic">
+			<img src="<%=theme.avatar%>" class="js-avatar" alt="avatar">
+		</a>
+		
+		<hgroup>
+		  <div class="header-author"><a href="<%=theme.root%>"><%=theme.author%></a></div>
+		</hgroup>
+		
+		<% if (theme.subtitle){ %>
+		<p class="header-subtitle"><%=theme.subtitle%></p>
+		<%}%>
+
+		<nav class="header-menu">
+			<ul>   
+			<% for (var i in theme.menu){ %>
+			   	<% if (theme.menu[i] === "/") { %>
+				  <li><a href="/" class="fa fa-home fa-fw"></a></li>
+				<% } else { %>
+				  <li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+				<% } %>
+	        <%}%>
+			
+			</ul>
+		</nav>
+
+		<nav class="header-smart-menu">
+    		<% for (var i in theme.smart_menu.menu){ %>
+    			<% if(theme.smart_menu.menu[i]){ %>
+    			<a q-on="click: openSlider(e, '<%-i%>')" href="javascript:void(0)"><%= theme.smart_menu.menu[i] %></a>
+    			<% } %>
+            <%}%>
+			<% for (var i in theme.smart_menu.link){ %>
+			  <% if (i === "开往"){ %>
+			    <a href="<%- url_for(theme.smart_menu.link[i]) %>" class="fa fa-subway" title="开往-友链接力"></a>
+			  <% } else { %>
+				<a href="<%- url_for(theme.smart_menu.link[i]) %>"><%= i %></a>
+			  <%}%>
+	        <%}%>		
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				<% for (var i in theme.subnav){ %>
+					<a class="<%= i %>" target="_blank" href="<%- url_for(theme.subnav[i]) %>" title="<%= i %>"><i class="icon-<%= i %>"></i></a>
+		        <%}%>
+			</div>
+		</nav>
+		
+		<!-- 网易云音乐插件 -->
+		<% if (theme.music && theme.music.enable){ %>
+			<br><br>
+			<div style="position:absolute; bottom:120px left:auto; width:100%">
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="52" src="//music.163.com/outchain/player?type=2&id=<%=theme.music.id||1476239407%>&auto=<%=theme.music.autoplay?1:0%>&height=32"></iframe>
+			</div>
+		<% } %>
+			
+		<!--时钟-->
+		<% if (theme.clock && theme.clock.enable){ %>
+			<%- partial('post/clock.ejs') %>
+		<% } %>
+
+	</header>		
+</div>
+
+

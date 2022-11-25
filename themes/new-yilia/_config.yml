@@ -1,0 +1,262 @@
+# Header
+author: 'XXX'
+#subtitle: ''
+
+
+# 头像url
+avatar: '/img/avatar.png'
+# 头像是否旋转
+avatarrotation: true
+# 网站图标
+favicon: '/img/favicon.ico'
+# 是否需要修改 root 路径
+# 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，
+# 请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。
+root: /
+
+
+# left-col侧栏
+menu:
+  主页: /
+  归档: /archives/index.html
+  分类: /categories/index.html
+  相册: /photos/index.html
+  音乐: /music/index.html
+
+  
+# SubNav
+subnav:
+  github: "#"
+  gitee: "#"
+  csdn: "#"
+  weibo: "#"
+  zhihu: "#"
+  #qq: "#"
+  #weixin: "#"
+  #jianshu: "#"
+  #douban: "#"
+  #segmentfault: "#"
+  #bilibili: "#"
+  #acfun: "#"
+  rss: "/atom.xml"
+  mail: "mailto:XXX@XXX.com"
+  #facebook: "#"
+  #google: "#"
+  #twitter: "#"
+  #linkedin: "#"
+  #steam: "#"
+  #cc: "#"
+  #wikipedia: "#"
+  #gitlab: "#"
+  #telegram: "#"
+  #youtube: "#"
+  #stackoverflow: "#"
+  #whatsapp: "#"
+  #instagram: "#"
+
+  
+# 网易云音乐插件
+music:
+  enable: false
+  id: 1476239407   # 网易云分享的ID
+  autoplay: false  # 是否开启自动播放
+
+# APlayer播放器
+# https://aplayer.js.org/
+aplayer:
+  enable: false
+  
+# 侧栏时钟
+clock:
+  enable: true
+
+# 鼠标特效
+mouse:
+  love: true
+  word: false
+  
+# 雪花特效 
+# 开启后有些卡
+snow:
+  enable: false
+  
+
+# 样式定制 - 一般不需要修改，除非有很强的定制欲望…
+style:
+  # 头像上面的背景颜色
+  #header: '#4d4d4d'
+  header: 'linear-gradient(55deg,#88ACDB,#49B1F5,#9534f1,#49b1f5)'
+  # 右滑板块背景
+  slider: 'linear-gradient(55deg,#88ACDB,#49B1F5,#9534f1,#49b1f5)'
+  # 好看的背景颜色
+  # 'linear-gradient(45deg, #2196f3, #c974f5)'
+  # 'linear-gradient(200deg,#ccc,#000)'
+  # 'linear-gradient(200deg,#a0cfe4,#e8c37e)'
+  # 'linear-gradient(45deg, #c053f7, #23a2ed)'
+
+
+# slider的设置
+slider:
+  # 是否默认展开tags板块
+  showTags: true
+
+# 智能菜单
+# 如不需要，将该对应项置为false
+# 比如
+#smart_menu:
+#  friends: false
+smart_menu:
+  link:
+    #随笔: /tags/随笔/
+    开往: https://www.foreverblog.cn/go.html
+  menu:
+    innerArchive: '所有文章'
+    friends: '友链'
+    aboutme: '关于我'
+
+friends:
+  三水のBlog: https://sanshui.findn.cn/
+  友情链接2: http://localhost:4000/
+  友情链接3: http://localhost:4000/
+  友情链接4: http://localhost:4000/
+  友情链接5: http://localhost:4000/
+  友情链接6: http://localhost:4000/
+
+aboutme: new-yilia<br>一个简洁优雅的hexo主题
+
+# 一言
+yiyan:
+  enable: true
+  
+  
+# Content
+
+# 是否开启字数统计
+# 不需要使用，直接设置值为false，或注释掉
+word_count: true
+# 文章太长，截断按钮文字
+# excerpt_link: 'more'
+# 文章卡片右下角常驻链接，不需要请设置为false
+show_all_link: '展开全文'
+
+# 是否开启分类的标签
+category_tag: false
+# 是否开启文章下的标签
+article_tag: true
+
+# 数学公式
+mathjax: true
+
+# 需要声明为“原创”的文章开头写上article_type: 0,“转载”则是article_type: 1
+article_type: true
+
+# 是否在新窗口打开链接
+open_in_new: false
+
+# 打赏
+reward:
+  enable: true
+  # 打赏样式 1 and 2
+  type: 2
+  # 打赏wording
+  wording: '感觉不错 支持一下'
+  # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
+  alipay: '/img/alipay-min.png'
+  # 微信二维码图片地址
+  weixin: '/img/wechatpay-min.png'
+
+
+# 目录
+toc: true
+# 根据自己的习惯来设置，如果你的目录标题习惯有标号，置为true即可隐藏hexo重复的序号；否则置为false
+toc_hide_index: false
+# 目录为空时的提示
+toc_empty_wording: '哦，目录不存在'
+
+# 是否有快速回到顶部的按钮
+top: true
+
+#是否开启分享
+share_jia: true
+
+# 版权声明
+#在不需要进行版权声明的文章的m d文件头部，设置属性 no_declare: true
+declare:
+  enable: true
+  licensee_url: https://creativecommons.org/licenses/by-nc-sa/4.0/          #当前应用的版权协议地址。
+  licensee_name: 'CC BY-NC-SA 4.0'                                          #版权协议的名称
+  licensee_alias: '知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议' # alias别名
+  # licensee_img: 'https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png'    #[可选]版权协议的Logo链接 
+
+
+#评论：1、waline；2、gittalk；3、畅言；4、Disqus；5、Gitment
+#不需要使用某项，直接设置值为false，或注释掉
+
+#1、waline
+# [Waline](https://waline.js.org)
+waline:
+  enable: true
+  server_url: 'your_waline_comments_url'
+  login: 'enable'       # 'enable': 启用登录 (默认) 'disable': 禁用登录，用户只能填写信息评论 'force': 强制登录，用户必须注册并登录才可发布评论
+  lang: 'zh-CN '        # 语言，默认'zh-CN', 'en'/ 'jp'可选
+  dark: ''              # 设置 'auto' 会根据设备暗黑模式自适应。
+  word_limit: 0         # 评论字数限制，0为不限制，默认值为0
+  page_size: 10         # 评论列表分页，数字为条数，默认值10
+  image_uploader: false # 你可以设置为 false 以禁用图片上传功能
+  pageview: true        # 是否开启文章访问量统计
+
+#2、gittalk
+gittalk: 
+  enable: false
+  clientID: 'xxx'
+  clientSecret: 'xxx'
+  repo: 'Blog_Gittalk_Comments'
+  owner: 'github user name'
+  admin: ['github user name1', 'github user name2']
+  
+
+#3、畅言
+# 广告有点多
+changyan_appid: false
+changyan_conf: false
+
+#4、Disqus
+disqus: false
+
+#5、Gitment
+gitment_owner: false      #你的 GitHub ID
+gitment_repo: ''          #存储评论的 repo
+gitment_oauth:
+  client_id: ''           #client ID
+  client_secret: ''       #client secret
+
+
+# 页脚信息
+footer:
+  enable: true
+  show_busuanzi: true
+  show_create_time: true
+  create_time: '01/01/1970 00:00:00'
+  icp: 'ICP备XXX号'
+  youpaiyun: true
+  
+
+# SEO优化
+
+# 百度统计
+# https://tongji.baidu.com/
+baidu_analytics:
+  enable: true
+  id: ''
+  
+# 谷歌分析  
+# http://analytics.google.com/analytics/web/
+google_analytics:
+  enable: true
+  id: ''
+  
+# 百度站长平台js自动推送(https://ziyuan.baidu.com/linksubmit/index)
+# 页面被访问了，就会被推送过去。
+# 目前js自动推送已经被百度取消
+baidu_push: false
+
