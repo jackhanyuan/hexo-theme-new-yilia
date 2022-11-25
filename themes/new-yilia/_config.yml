@@ -116,7 +116,7 @@ smart_menu:
 
 friends:
   三水のBlog: https://sanshui.findn.cn/
-  友情链接2: http://localhost:4000/
+  三水的笔记: https://findn.cn/
   友情链接3: http://localhost:4000/
   友情链接4: http://localhost:4000/
   友情链接5: http://localhost:4000/
@@ -237,7 +237,7 @@ footer:
   show_busuanzi: true
   show_create_time: true
   create_time: '01/01/1970 00:00:00'
-  icp: 'ICP备XXX号'
+  icp: '陕ICP备XXX号'
   youpaiyun: true
   
 
