@@ -22,7 +22,8 @@ python qiniu_upload.py
 
 4. 修改`source/photos/static/ins.js`
 
-找到119和120两行
+- 找到119和120两行
+
 ```js
 var minSrc = 'yor_photos_url/photos/min_photos/' + data.link[i];
 var src = 'your_photos_url/photos/photos/' + data.link[i];
