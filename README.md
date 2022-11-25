@@ -103,7 +103,7 @@ git clone git@github.com:jackhanyuan/hexo-theme-new-yilia.git .
 npm install 
 ```
 
-#### 配置
+### 配置
 
 修改hexo根目录下的 `_config.yml` 文件及`themes\new-yilia`目录下的`_config.yml`文件
 
