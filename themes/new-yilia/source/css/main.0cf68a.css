@@ -1102,7 +1102,6 @@ pre .css~* .id,pre .id {
 }
 .archive-article-date {
 	/*color:#999;*/
-	margin-right:9%;
 	float:right
 }
 .archive-article-date .icon {
@@ -1869,7 +1868,7 @@ to {
 }
 .article-info-index.article-info {
 	padding-top:20px;
-	margin:30px 7.6923% 0;
+	margin:30px 7.2923% 0;
 	min-height:72px;
 	border-top:1px solid #ddd
 }
