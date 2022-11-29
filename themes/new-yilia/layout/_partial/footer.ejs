@@ -54,7 +54,7 @@
       <div class="footer-center">
 	    <i class="fa fa-copyright" aria-hidden="true"></i> 
 		<!-- &copy; -->
-        <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
+        <%= theme.footer.create_year %>-<%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
 		<% if (theme.footer.icp){ %> 
 		  <span class="post-meta-divider">|</span>
 		  <a style="color:#1A1A1A" target="_blank" rel="noopener" href="http://beian.miit.gov.cn/"><%=theme.footer.icp%></a>
