@@ -107,15 +107,6 @@ mv hexo-theme-new-yilia/* .
 npm install
 ```
 
-### 从yilia无缝升级
-```sh
-git clone https://github.com/jackhanyuan/hexo-theme-new-yilia.git
-cd themes
-mv yilia yilia-bak
-cp ../hexo-new-theme-yilia/themes/yilia-new ./yilia -rv
-cd ../hexo-new-theme-yilia
-npm install
-```
 ### 配置
 
 根据需求，修改hexo根目录下的 `_config.yml` 文件及`themes\new-yilia`目录下的`_config.yml`文件
