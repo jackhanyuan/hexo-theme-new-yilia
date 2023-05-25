@@ -112,7 +112,7 @@ npm install
 cd themes
 git clone https://github.com/jackhanyuan/hexo-theme-new-yilia.git
 mv yilia yilia-bak
-cp ../hexo-new-theme-yilia/themes/yilia ./new-yilia -rv
+cp ../hexo-theme-new-yilia/themes/new-yilia ./yilia -rv
 cd ../hexo-new-theme-yilia
 npm install
 ```
