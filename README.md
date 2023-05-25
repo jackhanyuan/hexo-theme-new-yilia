@@ -107,10 +107,10 @@ mv hexo-theme-new-yilia/* .
 npm install
 ```
 
-### 从yilia无缝升级
+### 从原yilia升级
 ```sh
-git clone https://github.com/jackhanyuan/hexo-theme-new-yilia.git
 cd themes
+git clone https://github.com/jackhanyuan/hexo-theme-new-yilia.git
 mv yilia yilia-bak
 cp ../hexo-new-theme-yilia/themes/yilia-new ./yilia -rv
 cd ../hexo-new-theme-yilia
