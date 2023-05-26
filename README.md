@@ -4,6 +4,8 @@
 
 此项目是根据[hexo-theme-yilia](https://github.com/litten/hexo-theme-yilia)主题做了一些优化，具体效果请看[Demo](https://sanshui.findn.cn/)。
 
+<div align="center"><img src="new-yilia-demo.png" alt="new yalia demo"></div>
+
 ## 开始使用
 
 ### 全新安装
@@ -53,7 +55,7 @@ rm -rf hexo-theme-new-yilia
 npm install
 ```
 
-### 配置
+## 配置
 
 根据需求，修改hexo根目录下的 `_config.yml` 文件及`themes/new-yilia`目录下的`_config.yml`文件。
 
