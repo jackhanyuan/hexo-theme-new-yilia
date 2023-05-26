@@ -239,6 +239,7 @@ footer:
   create_year: '1970'
   create_time: '01/01/1970 00:00:00'
   icp: '陕ICP备XXX号'
+  theme_info: true
   youpaiyun: true
   
 
