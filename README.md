@@ -4,6 +4,68 @@
 
 此项目是根据[hexo-theme-yilia](https://github.com/litten/hexo-theme-yilia)主题做了一些优化，具体效果请看[Demo](https://sanshui.findn.cn/)。
 
+## 开始使用
+
+### 全新安装
+
+首先，根据[hexo官网教程](https://hexo.io/zh-cn/docs/)，安装hexo
+
+```sh
+npm install hexo-cli -g # npm 全局安装hexo-cli
+hexo init blog # 初始化博客，会自动创建blog文件夹并安装依赖
+cd blog # 进入博客根目录blog
+```
+
+- 删除冲突的文件
+
+```sh
+rm -rf scaffolds
+rm -rf source
+rm -rf themes
+rm _config.yml
+rm _config.landscape.yml
+rm package.json
+```
+
+- 克隆repo到hexo博客根目录，并调整目录结构
+
+```sh
+git clone https://github.com/jackhanyuan/hexo-theme-new-yilia.git
+mv hexo-theme-new-yilia/* .
+rm -rf hexo-theme-new-yilia
+```
+
+- 安装new-yilia所需依赖
+
+```sh
+npm install
+```
+
+### 从其它Hexo主题升级
+
+本步骤仅限从已有的Hexo主题升级，如果执行了[全新安装](#全新安装)，请忽略本步骤。
+
+```sh
+cd themes # 进入原Hexo博客根目录下themes文件夹
+git clone https://github.com/jackhanyuan/hexo-theme-new-yilia.git
+rsync -avb --suffix=_bak hexo-theme-new-yilia/* .. # 同步new-yilia主题到原Hexo博客根目录，如果有冲突会自动备份冲突文件（以_bak结尾）。
+rm -rf hexo-theme-new-yilia
+npm install
+```
+
+### 配置
+
+根据需求，修改hexo根目录下的 `_config.yml` 文件及`themes/new-yilia`目录下的`_config.yml`文件。
+
+```sh
+# Hexo常用命令
+hexo -v # 查看hexo版本
+hexo cl # 清理
+hexo g # 构建
+hexo s # 启动本地sever服务
+hexo d # 部署
+```
+
 ## 更新内容
 
 ### Yilia主题bug修复
@@ -69,60 +131,3 @@
 - 配置百度统计
 
 
-## 开始使用
-
-### 安装
-
-首先，根据[hexo官网教程](https://hexo.io/zh-cn/docs/)，安装hexo
-
-```sh
-npm install hexo-cli -g  # npm 全局安装hexo-cli
-hexo init blog  # 初始化blog 会自动创建blog文件夹并安装依赖
-hexo -v
-cd blog
-npm install  # 安装依赖
-```
-
-- 删除冲突的文件
-
-```
-rm scaffolds
-rm source
-rm themes
-rm _config.yml
-rm _config.landscape.yml
-rm package.json
-```
-
-- 克隆repo到hexo根目录，并调整目录结构
-
-```sh
-git clone git@github.com:jackhanyuan/hexo-theme-new-yilia.git
-mv hexo-theme-new-yilia/* .
-```
-
-- 安装new-yilia所需依赖
-
-```sh
-npm install
-```
-
-### 从原yilia升级
-```sh
-cd themes
-git clone https://github.com/jackhanyuan/hexo-theme-new-yilia.git
-mv yilia yilia-bak
-cp ../hexo-theme-new-yilia/themes/new-yilia ./yilia -rv
-cd ../hexo-new-theme-yilia
-npm install
-```
-### 配置
-
-根据需求，修改hexo根目录下的 `_config.yml` 文件及`themes\new-yilia`目录下的`_config.yml`文件
-
-```sh
-hexo clean # 清理
-hexo g # 构建
-hexo s # 启动本地sever服务
-hexo d # 部署
-```
