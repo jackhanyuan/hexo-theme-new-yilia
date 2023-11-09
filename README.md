@@ -2,9 +2,12 @@
 
 一个简洁优雅的hexo主题
 
-此项目是根据[hexo-theme-yilia](https://github.com/litten/hexo-theme-yilia)主题做了一些优化，具体效果请看[Demo](https://sanshui.findn.cn/)。
+- 支持全新安装
+- 支持从其它Hexo主题升级
 
-<div align="center"><img src="new-yilia-demo.png" alt="new yalia demo"></div>
+此项目是根据[hexo-theme-yilia](https://github.com/litten/hexo-theme-yilia)主题做了一些优化，非常好上手，具体效果请看[Demo](https://sanshui.findn.cn/)。
+
+<div align="center"><img src="https://github.com/jackhanyuan/hexo-theme-new-yilia/blob/5c8b3f4708820a45898ca3deff26597d74fa3825/new-yilia-demo.png?raw=true)" alt="new yalia demo" width=100%></div>
 
 ## 开始使用
 
