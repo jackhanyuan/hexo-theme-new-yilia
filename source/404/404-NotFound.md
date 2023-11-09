@@ -86,7 +86,7 @@ h1,h2 {
 		 	
 		<div class="errorpPage-operate">
 			<a href="javascript:window.location.reload()" class="operateBtn" title="刷新试试">刷新试试</a>
-			<a href="/" class="operateBtn" title="返回首页">返回首页</a>
+			<a href="./" class="operateBtn" title="返回首页">返回首页</a>
 		</div>
 	</div>
 	

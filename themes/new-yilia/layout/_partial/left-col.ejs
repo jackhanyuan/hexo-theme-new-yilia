@@ -4,11 +4,11 @@
 	<header id="header" class="inner">
 	
 		<a href="<%=config.root%>" class="profilepic">
-			<img src="<%=config.root%><%=theme.avatar%>" class="js-avatar" alt="avatar">
+			<img src="<%- url_for(theme.avatar) %>" class="js-avatar" alt="avatar">
 		</a>
 		
 		<hgroup>
-		  <div class="header-author"><a href="<%=config.root%>"><%=theme.author%></a></div>
+		  <div class="header-author"><a href="<%- url_for("/") %>"><%=theme.author%></a></div>
 		</hgroup>
 		
 		<% if (theme.subtitle){ %>
@@ -19,7 +19,7 @@
 			<ul>   
 			<% for (var i in theme.menu){ %>
 			   	<% if (theme.menu[i] === "/") { %>
-				  <li><a href="<%=config.root%>" class="fa fa-home fa-fw"></a></li>
+				  <li><a href="<%- url_for("/") %>" class="fa fa-home fa-fw"></a></li>
 				<% } else { %>
 				  <li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
 				<% } %>
@@ -65,5 +65,3 @@
 
 	</header>		
 </div>
-
-
