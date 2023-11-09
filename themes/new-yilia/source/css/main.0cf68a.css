@@ -481,8 +481,8 @@ i {
 }
 @font-face {
 	font-family:iconfont;
-	src:url(/fonts/iconfont.b322fa.eot);
-	src:url(/fonts/iconfont.b322fa.eot#iefix) format("embedded-opentype"),url(/fonts/iconfont.8c627f.woff) format("woff"),url(/fonts/iconfont.16acc2.ttf) format("truetype"),url(/fonts/iconfont.45d7ee.svg#iconfont) format("svg")
+	src:url(../fonts/iconfont.b322fa.eot);
+	src:url(../fonts/iconfont.b322fa.eot#iefix) format("embedded-opentype"),url(../fonts/iconfont.8c627f.woff) format("woff"),url(../fonts/iconfont.16acc2.ttf) format("truetype"),url(../fonts/iconfont.45d7ee.svg#iconfont) format("svg")
 }
 [class*=" icon-"],[class^=icon-] {
 	font-family:iconfont!important;
@@ -850,24 +850,24 @@ body {
 ::-webkit-scrollbar-button:start {
 	width:10px;
 	height:10px;
-	background:url(/fonts/scrollbar_arrow.png) no-repeat 0 0
+	background:url(../fonts/scrollbar_arrow.png) no-repeat 0 0
 }
 ::-webkit-scrollbar-button:start:hover {
-	background:url(/fonts/scrollbar_arrow.png) no-repeat -15px 0
+	background:url(../fonts/scrollbar_arrow.png) no-repeat -15px 0
 }
 ::-webkit-scrollbar-button:start:active {
-	background:url(/fonts/scrollbar_arrow.png) no-repeat -30px 0
+	background:url(../fonts/scrollbar_arrow.png) no-repeat -30px 0
 }
 ::-webkit-scrollbar-button:end {
 	width:10px;
 	height:10px;
-	background:url(/fonts/scrollbar_arrow.png) no-repeat 0 -18px
+	background:url(../fonts/scrollbar_arrow.png) no-repeat 0 -18px
 }
 ::-webkit-scrollbar-button:end:hover {
-	background:url(/fonts/scrollbar_arrow.png) no-repeat -15px -18px
+	background:url(../fonts/scrollbar_arrow.png) no-repeat -15px -18px
 }
 ::-webkit-scrollbar-button:end:active {
-	background:url(/fonts/scrollbar_arrow.png) no-repeat -30px -18px
+	background:url(../fonts/scrollbar_arrow.png) no-repeat -30px -18px
 }
 .article-entry .highlight,.article-entry pre {
 	background:#272822;
@@ -2467,7 +2467,7 @@ to {
 	height:2em;
 	top:50%;
 	margin:-1em 0 0;
-	background:url(/fonts/tooltip.4004ff.svg) no-repeat 50%;
+	background:url(../fonts/tooltip.4004ff.svg) no-repeat 50%;
 	background-size:100%
 }
 .tooltip-left .tooltip-west .tooltip-content:after,.tooltip-left .tooltip-west .tooltip-content:before {
@@ -3030,14 +3030,14 @@ to {
 	opacity:1
 }
 .pswp__button,.pswp__button--arrow--left:before,.pswp__button--arrow--right:before {
-	background:url(/fonts/default-skin.png) 0 0 no-repeat;
+	background:url(../fonts/default-skin.png) 0 0 no-repeat;
 	background-size:264px 88px;
 	width:44px;
 	height:44px
 }
 @media (-webkit-min-device-pixel-ratio:1.1),(-webkit-min-device-pixel-ratio:1.09375),(min-resolution:1.1dppx),(min-resolution:105dpi) {
 	.pswp--svg .pswp__button,.pswp--svg .pswp__button--arrow--left:before,.pswp--svg .pswp__button--arrow--right:before {
-	background-image:url(/fonts/default-skin.b257fa.svg)
+	background-image:url(../fonts/default-skin.b257fa.svg)
 }
 .pswp--svg .pswp__button--arrow--left,.pswp--svg .pswp__button--arrow--right {
 	background:none
@@ -3258,7 +3258,7 @@ a.pswp__share--download:hover {
 	opacity:1
 }
 .pswp__preloader--active .pswp__preloader__icn {
-	background:url(/fonts/preloader.gif) 0 0 no-repeat
+	background:url(../fonts/preloader.gif) 0 0 no-repeat
 }
 .pswp--css_animation .pswp__preloader--active {
 	opacity:1

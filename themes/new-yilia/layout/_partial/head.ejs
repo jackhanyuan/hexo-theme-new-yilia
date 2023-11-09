@@ -29,14 +29,14 @@
   <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
   
   <% if (theme.subnav.rss){ %>
-    <link rel="alternative" href="<%- theme.subnav.rss %>" title="<%= config.title %>" type="application/atom+xml">
+    <link rel="alternative" href="<%= config.root %><%- theme.subnav.rss %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
   <% if (theme.favicon){ %>
-    <link rel="icon" type="image/x-icon" href="<%- theme.favicon %>">
+    <link rel="icon" type="image/x-icon" href="<%= config.root %><%- theme.favicon %>">
   <% } %>
   <%- partial('css') %>
   <% if (theme.avatarrotation){ %>
-	<link rel="stylesheet" type="text/css" href="/css/avatarrotation.css">
+	<link rel="stylesheet" type="text/css" href="<%= config.root %>css/avatarrotation.css">
   <% } %>
   <style type="text/css">
   <% var defaultCtnBg = 'linear-gradient(200deg,#a0cfe4,#e8c37e)' %>

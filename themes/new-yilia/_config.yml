@@ -4,29 +4,25 @@ subtitle: '一个简洁优雅的hexo主题'
 
 
 # 头像url
-avatar: '/img/avatar.png'
+avatar: 'img/avatar.png'
 # 头像是否旋转
 avatarrotation: true
 # 网站图标
-favicon: '/img/favicon.ico'
-# 是否需要修改 root 路径
-# 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，
-# 请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。
-root: /
+favicon: 'img/favicon.ico'
 
 
 # left-col侧栏
 menu:
   主页: /
-  归档: /archives/index.html
-  分类: /categories/index.html
-  相册: /photos/index.html
-  音乐: /music/index.html
+  归档: archives/index.html
+  分类: categories/index.html
+  相册: photos/index.html
+  音乐: music/index.html
 
   
 # SubNav
 subnav:
-  github: "#"
+  github: "https://github.com/jackhanyuan"
   gitee: "#"
   csdn: "#"
   # weibo: "#"
@@ -38,7 +34,7 @@ subnav:
   #segmentfault: "#"
   #bilibili: "#"
   #acfun: "#"
-  rss: "/atom.xml"
+  rss: "atom.xml"
   mail: "mailto:XXX@XXX.com"
   #facebook: "#"
   #google: "#"
@@ -117,10 +113,10 @@ smart_menu:
 friends:
   三水のBlog: https://sanshui.findn.cn/
   三水的笔记: https://findn.cn/
-  友情链接3: http://localhost:4000/
-  友情链接4: http://localhost:4000/
-  友情链接5: http://localhost:4000/
-  友情链接6: http://localhost:4000/
+  友情链接3: /
+  友情链接4: /
+  友情链接5: /
+  友情链接6: /
 
 aboutme: new-yilia<br>一个简洁优雅的hexo主题
 
@@ -161,9 +157,9 @@ reward:
   # 打赏wording
   wording: '感觉不错 支持一下'
   # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
-  alipay: '/img/alipay-min.png'
+  alipay: 'img/alipay-min.png'
   # 微信二维码图片地址
-  weixin: '/img/wechatpay-min.png'
+  weixin: 'img/wechatpay-min.png'
 
 
 # 目录
